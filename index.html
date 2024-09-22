@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Đăng ký</title>
+    <link rel="icon" type="image/x-icon" href="ech_xanh.png">
+    <style>
+        body {
+            font-family: Segoe UI, sans-serif;
+            background-color: white;
+            background-image: url('tam8chuyen.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 40%;
+            transform: translateX(20%);
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+        }
+        input[type="checkbox"] + label, input[type="radio"] + label {
+            font-weight: normal;
+        }
+        button {
+            background-color: #5b97f7;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: rgb(85, 85, 181);
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Sorry, this feature has not been built yet");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng ký vào group Facebook Hội 8 Chuyện</h2>
+        <form action="/submit" method="POST" onsubmit="return showAlert()">
+            <!-- Họ tên -->
+            <label for="fullname">Họ và tên:</label> <br>
+            <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" title="Vui lòng đặt tên thật" required> <br> <br>
+
+            <!-- Ngày sinh -->
+            <label for="birthday">Ngày sinh:</label> <br>
+            <input type="date" id="birthday" name="birthday" required> <br> <br>
+
+            <!-- Email -->
+            <label for="email">Email:</label> <br>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required> <br> <br>
+
+            <!-- Giới tính -->
+            <label for="gender">Giới tính:</label> <br>
+            <select id="gender" name="gender" required>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select> <br> <br>
+
+            <!-- Sở thích (checkbox) -->
+            <label>Sở thích:</label><br>
+            <input type="checkbox" id="gossip" name="hobbies" value="gossip">
+            <label for="gossip">Tám chuyện</label><br>
+            <input type="checkbox" id="music" name="hobbies" value="music">
+            <label for="music">Âm nhạc</label><br>
+            <input type="checkbox" id="travel" name="hobbies" value="travel">
+            <label for="travel">Du lịch</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Đọc sách</label><br>
+            <input type="text" id="other_hobbies" name="other_hobbies" placeholder="Khác"><br><br>
+
+            <!-- Tình trạng hôn nhân (radio button) -->
+            <label>Tình trạng hôn nhân:</label><br>
+            <input type="radio" id="single" name="marital-status" value="single" required>
+            <label for="single">Độc thân</label><br>
+            <input type="radio" id="married" name="marital-status" value="married">
+            <label for="married">Đã kết hôn</label><br><br>
+
+            <!-- Nghề nghiệp -->
+            <label for="job">Nghề nghiệp:</label>
+            <input type="text" id="job" name="job" placeholder="Nhập nghề nghiệp của bạn..." required> <br><br>
+
+            <!-- Mô tả bản thân -->
+            <label for="description">Mô tả ngắn gọn về bản thân:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Viết vài dòng về bạn..."></textarea> <br><br>
+
+            <!-- Mật khẩu -->
+            <label for="password">Mật khẩu:</label> <br>
+            <input type="password" id="password" name="password" title="Thứ sẽ được dùng để xác nhận người trong group để tránh mạo danh" required>
+
+            <!-- Gửi thông tin -->
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+</body>
+</html>
